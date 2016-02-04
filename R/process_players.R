@@ -30,7 +30,7 @@ process_players <- function() {
 	}
 	
 	print("removing stats directory")
-	#unlink("current/stats",recursive=TRUE)
+	unlink("current/stats",recursive=TRUE)
 	print("reading data")
 	p<<-read.table("current/players.txt")
 	print("filtering unrated")
@@ -40,12 +40,12 @@ process_players <- function() {
 	print("creating stats directory")
 	dir.create("current/stats")
 	print("collect country")
-	#process_key("country")
+	process_key("country")
 	print("collect birthday")
 	process_key("birthday")
 	print("collect rating cluster")
-	#process_key("rcluster")
+	process_key("rcluster")
 	print("collect title")
-	#process_key("title")
+	process_key("title")
 }
 
